@@ -5,6 +5,22 @@
         <description>Sparkle update feed for Dictation — local-first macOS dictation + meeting recorder.</description>
         <language>en</language>
         <item>
+            <title>Parla 2.17</title>
+            <pubDate>Fri, 01 May 2026 05:55:27 +0000</pubDate>
+            <sparkle:version>29</sparkle:version>
+            <sparkle:shortVersionString>2.17</sparkle:shortVersionString>
+            <description><![CDATA[
+<p>v2.17 fixes Check for Updates: (1) Menu bar item was silently failing because Parla runs as .accessory (LSUIElement) and Sparkle's dialogs need .regular to surface — invokeSparkleCheck now promotes to .regular and activates the app before invoking Sparkle, so the Update Available / Up to date dialogs actually appear. (2) Added a Settings → Startup → Updates section showing current version + a Check for Updates… button — same code path, alternate discovery point. After v2.17 you'll never need to run terminal install commands again.</p>
+            ]]></description>
+            <enclosure url="https://github.com/linuslinuslinus/dictation-app-releases/releases/download/v2.17/Parla-2.17.dmg"
+                       sparkle:os="macos"
+                       sparkle:minimumSystemVersion="14.0"
+                       length="13577265"
+                       type="application/octet-stream"
+                       sparkle:edSignature="cyIdJjjmK2mY3nygP+q/XDFtuhHVNb0nmaDXfkL8pW2+6z6Q7tEed8Hj29pVv/oxqiRu6Onges+9/63hhFoaCg==" length="13577265" />
+            <sparkle:minimumSystemVersion>14.0</sparkle:minimumSystemVersion>
+        </item>
+        <item>
             <title>Parla 2.16</title>
             <pubDate>Fri, 01 May 2026 05:48:33 +0000</pubDate>
             <sparkle:version>28</sparkle:version>
