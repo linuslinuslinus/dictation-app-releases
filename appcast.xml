@@ -5,6 +5,22 @@
         <description>Sparkle update feed for Parla — local-first macOS dictation + meeting recorder.</description>
         <language>en</language>
         <item>
+            <title>Parla 2.30</title>
+            <pubDate>Fri, 01 May 2026 10:24:57 +0000</pubDate>
+            <sparkle:version>42</sparkle:version>
+            <sparkle:shortVersionString>2.30</sparkle:shortVersionString>
+            <description><![CDATA[
+<p>v2.30 — fixes the email-formatting regression. v2.26 stopped Gemma from hallucinating fake To:/Subject: headers, but the prompt swung too defensive: the model now produces flat prose like 'Hi John, I wanted to follow up… Best, Linus' on one line, with no blank line after the greeting and no blank line before the sign-off. Two fixes layered: (1) PROMPT — the EMAIL block now explicitly tells the model to put greetings on their own line followed by a blank line, body paragraphs separated by blank lines, sign-offs preceded by a blank line on their own line, with sender name on the very next line (no blank line between sign-off and name — that's a continuous closer). Includes two few-shot example transformations so Gemma sees the expected output shape. (2) POST-PROCESSOR — formatEmailBodyStructure runs AFTER cleanup as belt-and-suspenders. Detects greetings (Hi/Hello/Hey/Dear/Greetings + name + comma) at the very start and inserts a blank line after; detects sign-offs (Best/Best regards/Kind regards/Cheers/Sincerely/Thanks/Thank you/Yours/Regards/etc + comma) near the end and inserts a blank line before. Conservative — only fires when a greeting/sign-off pattern is unambiguously present, otherwise leaves the prose alone. This is the structure Wispr Flow / Aqua Voice / Apple Mail produce by default; Parla now matches.</p>
+            ]]></description>
+            <enclosure url="https://github.com/linuslinuslinus/dictation-app-releases/releases/download/v2.30/Parla-2.30.dmg"
+                       sparkle:os="macos"
+                       sparkle:minimumSystemVersion="14.0"
+                       length="13636309"
+                       type="application/octet-stream"
+                       sparkle:edSignature="Q/znAGFzBkCg++U5/3lXSwc0gtVnbIQIiHimxGIYkhBGTZ7NozL0Vu6avf1P1PNSV9dkpxFmphD/nu/j6LptDQ==" />
+            <sparkle:minimumSystemVersion>14.0</sparkle:minimumSystemVersion>
+        </item>
+        <item>
             <title>Parla 2.29</title>
             <pubDate>Fri, 01 May 2026 10:17:42 +0000</pubDate>
             <sparkle:version>41</sparkle:version>
