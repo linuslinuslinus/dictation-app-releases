@@ -5,6 +5,22 @@
         <description>Sparkle update feed for Parla — local-first macOS dictation + meeting recorder.</description>
         <language>en</language>
         <item>
+            <title>Parla 2.33</title>
+            <pubDate>Fri, 01 May 2026 11:21:04 +0000</pubDate>
+            <sparkle:version>45</sparkle:version>
+            <sparkle:shortVersionString>2.33</sparkle:shortVersionString>
+            <description><![CDATA[
+<p>Hotfix: removes the broken Gemma 3n E4B/E2B cleanup model options. Both relied on an MLX-Swift Gemma 3n LM-only path that emits only a single token before stopping. Anyone who had selected one is migrated to the working Gemma 4 E2B default automatically.</p>
+            ]]></description>
+            <enclosure url="https://github.com/linuslinuslinus/dictation-app-releases/releases/download/v2.33/Parla-2.33.dmg"
+                       sparkle:os="macos"
+                       sparkle:minimumSystemVersion="14.0"
+                       length="13643330"
+                       type="application/octet-stream"
+                       sparkle:edSignature="AYXnT0HSnhzACX+Ozi8EhmJkLmaOpUL2fd+Gh1GfgEtL5Vh53fRuVfzEkIBX5tOCHNqkoqnhcXO6dU2Ve7GUBQ==" />
+            <sparkle:minimumSystemVersion>14.0</sparkle:minimumSystemVersion>
+        </item>
+        <item>
             <title>Parla 2.32</title>
             <pubDate>Fri, 01 May 2026 11:05:00 +0000</pubDate>
             <sparkle:version>44</sparkle:version>
