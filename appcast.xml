@@ -5,6 +5,22 @@
         <description>Sparkle update feed for Dictation — local-first macOS dictation + meeting recorder.</description>
         <language>en</language>
         <item>
+            <title>Parla 2.15</title>
+            <pubDate>Fri, 01 May 2026 05:29:13 +0000</pubDate>
+            <sparkle:version>27</sparkle:version>
+            <sparkle:shortVersionString>2.15</sparkle:shortVersionString>
+            <description><![CDATA[
+<p>Bug fixes + Settings redesign: (1) Custom toggle shortcut works again — startToggleMode now uses what's actually configured (chord vs modifier-only), not the saved mode (which could go stale when picker switched preset→custom). (2) Removed auto-Finder reveal after meeting saves — notification + Recent Meetings menu still surface the file. (3) Live Captions window no longer grows over time — locked NSHostingView size, added ScrollView with auto-scroll-to-bottom, buffer raised to 200 lines for scrollback. (4) Settings redesigned to match Claude Design sidebar layout (220pt sidebar, GENERAL/CAPTURE/SYSTEM groups, parlaAmber selection tint). (5) MeetingBrowser summary now renders Markdown (**bold**, *italic*) instead of showing raw syntax.</p>
+            ]]></description>
+            <enclosure url="https://github.com/linuslinuslinus/dictation-app-releases/releases/download/v2.15/Parla-2.15.dmg"
+                       sparkle:os="macos"
+                       sparkle:minimumSystemVersion="14.0"
+                       length="13566303"
+                       type="application/octet-stream"
+                       sparkle:edSignature="QH34b7nbddNv0DPiExQsKxQNj3J63216SmkFo/ZjNYySwK0DApJtCQ/xEI/mmYH64RMvLfR9cw0aKa/voCiwCA==" length="13566303" />
+            <sparkle:minimumSystemVersion>14.0</sparkle:minimumSystemVersion>
+        </item>
+        <item>
             <title>Parla 2.14</title>
             <pubDate>Fri, 01 May 2026 05:03:32 +0000</pubDate>
             <sparkle:version>26</sparkle:version>
