@@ -5,6 +5,22 @@
         <description>Sparkle update feed for Dictation — local-first macOS dictation + meeting recorder.</description>
         <language>en</language>
         <item>
+            <title>Parla 2.20</title>
+            <pubDate>Fri, 01 May 2026 06:56:50 +0000</pubDate>
+            <sparkle:version>32</sparkle:version>
+            <sparkle:shortVersionString>2.20</sparkle:shortVersionString>
+            <description><![CDATA[
+<p>v2.20 — Check for Updates ROOT-CAUSE FIX. Your launch logs showed Sparkle was successfully initializing ('Sparkle updater initialized; feed=…') but Check for Updates still logged 'Sparkle updater not available'. The bug: NSApp.delegate as? AppDelegate cast was returning nil. With SwiftUI's @NSApplicationDelegateAdaptor + a Settings-only scene (LSUIElement menu bar app), SwiftUI uses an internal proxy delegate that wraps AppDelegate — direct casts silently fail. Fix: SparkleUpdater now exposes a static shared singleton (set in init) and a triggerCheckForUpdates() helper that handles the .accessory→.regular activation flip. Both menu bar item and Settings button route through this — no more delegate cast.</p>
+            ]]></description>
+            <enclosure url="https://github.com/linuslinuslinus/dictation-app-releases/releases/download/v2.20/Parla-2.20.dmg"
+                       sparkle:os="macos"
+                       sparkle:minimumSystemVersion="14.0"
+                       length="13577862"
+                       type="application/octet-stream"
+                       sparkle:edSignature="8xWuiEpMybs7k/4/os7UrSyzEosaRjRqKI+d+6mBDRLFLuG4MoGBl2yrBs1VklmEEwywrHdd8uMgo4aLmbRjCQ==" length="13577862" />
+            <sparkle:minimumSystemVersion>14.0</sparkle:minimumSystemVersion>
+        </item>
+        <item>
             <title>Parla 2.19</title>
             <pubDate>Fri, 01 May 2026 06:48:52 +0000</pubDate>
             <sparkle:version>31</sparkle:version>
