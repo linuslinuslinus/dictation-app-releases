@@ -5,6 +5,24 @@
         <description>Sparkle update feed for Parla — local-first macOS dictation + meeting recorder.</description>
         <language>en</language>
         <item>
+            <title>Parla 2.34</title>
+            <pubDate>Fri, 01 May 2026 11:28:31 +0000</pubDate>
+            <sparkle:version>46</sparkle:version>
+            <sparkle:shortVersionString>2.34</sparkle:shortVersionString>
+            <description><![CDATA[
+<p>Two fixes:
+1. Removed Gemma 3 / Gemma 3n cleanup options entirely. Gemma 4 E2B is now the single cleanup model — sets us up for LoRA fine-tuning. Anyone who had a removed option selected is migrated to Gemma 4 E2B automatically; on-disk caches are left alone.
+2. Menu-bar windows (Preferences, Meeting Browser, Welcome, Check for Updates) now reliably come to the foreground when another app was in front. The .accessory → .regular activation transition needed a more aggressive recipe: NSApp.activate(ignoringOtherApps:) + NSRunningApplication.current.activate(options:) + orderFrontRegardless on the window, with a runloop-tick dispatch for Sparkle's modal alert.</p>
+            ]]></description>
+            <enclosure url="https://github.com/linuslinuslinus/dictation-app-releases/releases/download/v2.34/Parla-2.34.dmg"
+                       sparkle:os="macos"
+                       sparkle:minimumSystemVersion="14.0"
+                       length="13645287"
+                       type="application/octet-stream"
+                       sparkle:edSignature="gJSjQgW+2C8MWgYek5ZW0LxceDal+wQlp8/8wO3sPj5+350Ig6LVUpokRXyiUcowJ4T/2Vm8B1OWcM96PJGRCg==" />
+            <sparkle:minimumSystemVersion>14.0</sparkle:minimumSystemVersion>
+        </item>
+        <item>
             <title>Parla 2.33</title>
             <pubDate>Fri, 01 May 2026 11:21:04 +0000</pubDate>
             <sparkle:version>45</sparkle:version>
