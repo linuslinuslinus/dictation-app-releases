@@ -5,6 +5,22 @@
         <description>Sparkle update feed for Dictation — local-first macOS dictation + meeting recorder.</description>
         <language>en</language>
         <item>
+            <title>Parla 2.18</title>
+            <pubDate>Fri, 01 May 2026 06:24:56 +0000</pubDate>
+            <sparkle:version>30</sparkle:version>
+            <sparkle:shortVersionString>2.18</sparkle:shortVersionString>
+            <description><![CDATA[
+<p>v2.18 — custom toggle shortcut REGRESSION FIX. Root cause found by diffing against the original (working) HEAD version: my refactor gated KeyboardShortcuts.onKeyDown registration behind 'if getShortcut != nil' — but the package keys handlers by Name, not by shortcut value, so registering BEFORE a shortcut is set is the correct robust pattern. With the gate in place, if startToggleMode evaluated at a moment when no shortcut existed (race window during restart, or app launch before the user had configured anything), the handler was never installed; subsequent setShortcut from the recorder configured the OS-level Carbon hotkey but the package had no handler to dispatch to and presses were silently dropped. Reverted to unconditional registration (matching the working pattern) for both .dictationToggle and .dictationHoldKey. Modifier-only path (CGEventTap) remains conditionally installed when customToggleModifiers > 0.</p>
+            ]]></description>
+            <enclosure url="https://github.com/linuslinuslinus/dictation-app-releases/releases/download/v2.18/Parla-2.18.dmg"
+                       sparkle:os="macos"
+                       sparkle:minimumSystemVersion="14.0"
+                       length="13576532"
+                       type="application/octet-stream"
+                       sparkle:edSignature="e7X/iS294PgLei0Gg1c5KogBgjEX+hYEXSFSO6/gG54y4yktdc4ZSNPejACFnqgzyjyFz9rWjnK/IP6wY7CrAw==" length="13576532" />
+            <sparkle:minimumSystemVersion>14.0</sparkle:minimumSystemVersion>
+        </item>
+        <item>
             <title>Parla 2.17</title>
             <pubDate>Fri, 01 May 2026 05:55:27 +0000</pubDate>
             <sparkle:version>29</sparkle:version>
