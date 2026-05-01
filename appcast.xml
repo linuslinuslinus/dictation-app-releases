@@ -5,6 +5,22 @@
         <description>Sparkle update feed for Dictation — local-first macOS dictation + meeting recorder.</description>
         <language>en</language>
         <item>
+            <title>Parla 2.21</title>
+            <pubDate>Fri, 01 May 2026 08:35:39 +0000</pubDate>
+            <sparkle:version>33</sparkle:version>
+            <sparkle:shortVersionString>2.21</sparkle:shortVersionString>
+            <description><![CDATA[
+<p>v2.21 — fixes the 'Update Error / parsing the update feed' Sparkle dialog. The release script was emitting <enclosure> tags with length= attribute TWICE (once explicit, once from sign_update output) — invalid XML that newer Sparkle versions reject. Now: release.sh extracts only sparkle:edSignature from sign_update; the historical appcast.xml has been cleaned of duplicate length= attributes (xmllint validates clean now). Once you click Check for Updates from v2.20, the dialog should now show 'Update Available — Parla 2.21' and one click installs it.</p>
+            ]]></description>
+            <enclosure url="https://github.com/linuslinuslinus/dictation-app-releases/releases/download/v2.21/Parla-2.21.dmg"
+                       sparkle:os="macos"
+                       sparkle:minimumSystemVersion="14.0"
+                       length="13577979"
+                       type="application/octet-stream"
+                       sparkle:edSignature="5qbo6/JMvJtQ0Z8rxU4GbVxsgjAoyBwCJMtjjYk7js2xHJRWwj3bbQZ/JJ9vQkNWkuWYmaXsbvxKf8cEBK+aAg==" />
+            <sparkle:minimumSystemVersion>14.0</sparkle:minimumSystemVersion>
+        </item>
+        <item>
             <title>Parla 2.20</title>
             <pubDate>Fri, 01 May 2026 06:56:50 +0000</pubDate>
             <sparkle:version>32</sparkle:version>
