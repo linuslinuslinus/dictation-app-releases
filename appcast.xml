@@ -5,6 +5,22 @@
         <description>Sparkle update feed for Parla — local-first macOS dictation + meeting recorder.</description>
         <language>en</language>
         <item>
+            <title>Parla 2.29</title>
+            <pubDate>Fri, 01 May 2026 10:17:42 +0000</pubDate>
+            <sparkle:version>41</sparkle:version>
+            <sparkle:shortVersionString>2.29</sparkle:shortVersionString>
+            <description><![CDATA[
+<p>v2.29 — fixes the Screen Recording onboarding gap. Bug: macOS only registers an app in the Screen Recording list once it ATTEMPTS to use the screen-capture API; Parla's onboarding only walked the user through 3 permissions (Mic, Accessibility, Input Monitoring) and never triggered the screen-capture API at launch, so users who hadn't yet started a meeting recording would find Parla simply missing from System Settings → Screen & System Audio Recording — no toggle to flip, only the + button to manually add it. Two fixes: (1) added .screenRecording to OnboardingView's stepOrder, so new users walk through 4 permissions including Screen Recording (system prompt fires automatically). (2) AppDelegate.applicationDidFinishLaunching now calls CGRequestScreenCaptureAccess() at launch when status is not yet granted — mirrors the existing IOHIDRequestAccess and AVCaptureDevice.requestAccess patterns. This ensures Parla appears in the Screen Recording list on every machine, even for users who already onboarded under v2.28 or earlier (you'll get the system prompt once on first launch of v2.29; click Allow and you're done).</p>
+            ]]></description>
+            <enclosure url="https://github.com/linuslinuslinus/dictation-app-releases/releases/download/v2.29/Parla-2.29.dmg"
+                       sparkle:os="macos"
+                       sparkle:minimumSystemVersion="14.0"
+                       length="13634884"
+                       type="application/octet-stream"
+                       sparkle:edSignature="EN7zUu3tOFWim9WgNzVm4qwV9UszwRLIM/rllh2QD4zhySBYhxeTXfA6ldqgqhT6PFnCUeZ2ar5mCyJztKwqBg==" />
+            <sparkle:minimumSystemVersion>14.0</sparkle:minimumSystemVersion>
+        </item>
+        <item>
             <title>Parla 2.28</title>
             <pubDate>Fri, 01 May 2026 10:05:49 +0000</pubDate>
             <sparkle:version>40</sparkle:version>
