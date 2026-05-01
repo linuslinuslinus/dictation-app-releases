@@ -5,6 +5,22 @@
         <description>Sparkle update feed for Dictation — local-first macOS dictation + meeting recorder.</description>
         <language>en</language>
         <item>
+            <title>Dictation 2.11.1</title>
+            <pubDate>Fri, 01 May 2026 04:00:35 +0000</pubDate>
+            <sparkle:version>23</sparkle:version>
+            <sparkle:shortVersionString>2.11.1</sparkle:shortVersionString>
+            <description><![CDATA[
+<p>Performance fix: drops peak unified memory footprint dramatically. Calls MLX.GPU.clearCache() after every Gemma generation, in reset(), and between map-reduce summary chunks. Adds IdleReclaimer that automatically frees the loaded Gemma model after 5 min of idleness (configurable in Preferences → Cleanup → Free cleanup model after [N] minutes idle). Targets the 17.4 GB peak found in the v2.10 perf audit.</p>
+            ]]></description>
+            <enclosure url="https://github.com/linuslinuslinus/dictation-app-releases/releases/download/v2.11.1/Dictation-2.11.1.dmg"
+                       sparkle:os="macos"
+                       sparkle:minimumSystemVersion="14.0"
+                       length="13132873"
+                       type="application/octet-stream"
+                       sparkle:edSignature="tzrM35FRAWTQFgZLjANaLGbScocY4m7FuAtNvgJPrAcjyu9Wq5RJzdCekkSETf1sqqdu96lomCaifZJAVb/bAg==" length="13132873" />
+            <sparkle:minimumSystemVersion>14.0</sparkle:minimumSystemVersion>
+        </item>
+        <item>
             <title>Dictation 2.11</title>
             <pubDate>Fri, 01 May 2026 03:26:17 +0000</pubDate>
             <sparkle:version>22</sparkle:version>
