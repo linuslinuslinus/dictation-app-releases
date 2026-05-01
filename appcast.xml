@@ -5,6 +5,22 @@
         <description>Sparkle update feed for Dictation — local-first macOS dictation + meeting recorder.</description>
         <language>en</language>
         <item>
+            <title>Parla 2.19</title>
+            <pubDate>Fri, 01 May 2026 06:48:52 +0000</pubDate>
+            <sparkle:version>31</sparkle:version>
+            <sparkle:shortVersionString>2.19</sparkle:shortVersionString>
+            <description><![CDATA[
+<p>v2.19 — FSM bug fix for modifier-only toggle that overlaps with hold modifier. When toggle=⌃⇧ and hold=Ctrl, pressing the combo goes through .suspended/.toggledSuspended states (because the hold-suppression guard fires when ⌃⇧ is exactly matched). The FSM was missing transitions for (.suspended, .toggleFired) → .toggledSuspended and (.toggledSuspended, .toggleFired) → .suspended — toggle presses from those states fell through to the default no-op, leaving the user with hold-only behavior despite the chord listener firing correctly. Toggle now works regardless of overlap with hold.</p>
+            ]]></description>
+            <enclosure url="https://github.com/linuslinuslinus/dictation-app-releases/releases/download/v2.19/Parla-2.19.dmg"
+                       sparkle:os="macos"
+                       sparkle:minimumSystemVersion="14.0"
+                       length="13576906"
+                       type="application/octet-stream"
+                       sparkle:edSignature="icadUz+OnjSsBE6zd4UB2rNtJk9yJ5xZ0nxV6JC787AMUmPOXrzI+ZdqN6LzzteDzO9GyHS29QHVQ3eXN+tMAg==" length="13576906" />
+            <sparkle:minimumSystemVersion>14.0</sparkle:minimumSystemVersion>
+        </item>
+        <item>
             <title>Parla 2.18</title>
             <pubDate>Fri, 01 May 2026 06:24:56 +0000</pubDate>
             <sparkle:version>30</sparkle:version>
