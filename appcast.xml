@@ -5,6 +5,27 @@
         <description>Sparkle update feed for Parla — local-first macOS dictation + meeting recorder.</description>
         <language>en</language>
         <item>
+            <title>Parla 2.26</title>
+            <pubDate>Fri, 01 May 2026 09:50:37 +0000</pubDate>
+            <sparkle:version>38</sparkle:version>
+            <sparkle:shortVersionString>2.26</sparkle:shortVersionString>
+            <description><![CDATA[
+<p>v2.26 — fixes the email-headers-being-hallucinated bug. When dictating into Mail.app / Outlook / Gmail (or anywhere else the bundle-ID classifier flagged .email), Gemma was inserting fake headers like 'To: User
+Subject: Speech Recognition Issue
+
+Hi,
+
+…' in front of the body. Two compounding issues: (1) the FORMAT DETECTION block in the cleanup prompt had a To:/Subject:/greeting/closing TEMPLATE that the model latched onto. (2) v2.22's bundle-ID classifier made .email fire much more often (any time you're in Mail.app), so the over-application became visible. Fixed by rewriting both the FORMAT DETECTION email rules AND the contextInstruction(.email) hint to say 'body only — never output header lines under any circumstances'. Matches how Wispr Flow / Aqua Voice handle the same case (the user is already in their email client; cleanup produces body text only).</p>
+            ]]></description>
+            <enclosure url="https://github.com/linuslinuslinus/dictation-app-releases/releases/download/v2.26/Parla-2.26.dmg"
+                       sparkle:os="macos"
+                       sparkle:minimumSystemVersion="14.0"
+                       length="13622979"
+                       type="application/octet-stream"
+                       sparkle:edSignature="D28Jt8EgaEJa06rcCYiDokaXH8H3BeT5r3D8egvz+J7AaHaj34U7yZIMrsyTz0TI6gV3PczvR/moonE9L9gUAw==" />
+            <sparkle:minimumSystemVersion>14.0</sparkle:minimumSystemVersion>
+        </item>
+        <item>
             <title>Parla 2.25</title>
             <pubDate>Fri, 01 May 2026 09:41:08 +0000</pubDate>
             <sparkle:version>37</sparkle:version>
