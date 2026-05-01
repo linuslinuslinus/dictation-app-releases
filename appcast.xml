@@ -5,6 +5,22 @@
         <description>Sparkle update feed for Dictation — local-first macOS dictation + meeting recorder.</description>
         <language>en</language>
         <item>
+            <title>Parla 2.14</title>
+            <pubDate>Fri, 01 May 2026 05:03:32 +0000</pubDate>
+            <sparkle:version>26</sparkle:version>
+            <sparkle:shortVersionString>2.14</sparkle:shortVersionString>
+            <description><![CDATA[
+<p>Design handoff fidelity pass — fixes from spec audit: menu-bar icons now 16pt (was 18); HUD idle breath corrected to scale 0.92↔1.0 + opacity 0.65↔1; HUD recording adds outward fade for the ripple feel; past caption lines fade to 35% (current speaker full weight); 0.4s easeOut fade between onboarding screens; preferences section icons bumped to 18pt and use .primary foreground.</p>
+            ]]></description>
+            <enclosure url="https://github.com/linuslinuslinus/dictation-app-releases/releases/download/v2.14/Parla-2.14.dmg"
+                       sparkle:os="macos"
+                       sparkle:minimumSystemVersion="14.0"
+                       length="13538544"
+                       type="application/octet-stream"
+                       sparkle:edSignature="vCNfR/JmxgaKWsfGcr1WlvDuNmnzXVV/yD/rCJld2vs69JEXyeN+w2ssFfp/1rDt7a4V1LCMI4SrZk01m/drBQ==" length="13538544" />
+            <sparkle:minimumSystemVersion>14.0</sparkle:minimumSystemVersion>
+        </item>
+        <item>
             <title>Parla 2.13</title>
             <pubDate>Fri, 01 May 2026 04:56:44 +0000</pubDate>
             <sparkle:version>25</sparkle:version>
