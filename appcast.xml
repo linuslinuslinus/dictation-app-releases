@@ -5,6 +5,22 @@
         <description>Sparkle update feed for Parla — local-first macOS dictation + meeting recorder.</description>
         <language>en</language>
         <item>
+            <title>Parla 2.31</title>
+            <pubDate>Fri, 01 May 2026 10:32:25 +0000</pubDate>
+            <sparkle:version>43</sparkle:version>
+            <sparkle:shortVersionString>2.31</sparkle:shortVersionString>
+            <description><![CDATA[
+<p>v2.31 — fixes Gemma's tendency to paraphrase a flowing monologue into a bulleted list of questions. Specific case: dictating a long thoughtful question with multiple sub-questions ('how do you think we could be implementing X, or what do you think would be the best?') was being turned into a paraphrased list of bullet points like '- Do you think this LLM could also do that? - Do we need to give better instructions? - How do you think we could be improving that?' That violates BOTH the no-paraphrasing AND no-restructuring rules. Two-layer fix: (1) PROMPT — tightened the LIST detection rule (only fire on explicit triggers like 'todo list:', 'shopping list:', numbered counting; never on 'list' as a casual word, never on multi-question monologues) + added a NO RESTRUCTURING rule that forbids breaking paragraphs into bullets or paraphrasing questions into a bullet-question list. The OTHERWISE / prose default is now emphasized: 'when in doubt, ALWAYS prose'. (2) POST-PROCESSOR — flattenBullets defensive scrub. If the input transcript shows no list intent (no 'list:'/'todo:'/'first second third' cues) but Gemma still emitted ≥2 bulleted lines, the bullets are stripped and the lines re-joined into prose. Catches small-model over-formatting that the prompt alone may not always prevent.</p>
+            ]]></description>
+            <enclosure url="https://github.com/linuslinuslinus/dictation-app-releases/releases/download/v2.31/Parla-2.31.dmg"
+                       sparkle:os="macos"
+                       sparkle:minimumSystemVersion="14.0"
+                       length="13644091"
+                       type="application/octet-stream"
+                       sparkle:edSignature="XCRwZqhY9T6xEFEP5LjKnZ+hXqVOSGU2rGzVXUe0My1Z2KM2HhXXHth+4HCZDTki8ISSO79Xrq2XzSOcohOTAA==" />
+            <sparkle:minimumSystemVersion>14.0</sparkle:minimumSystemVersion>
+        </item>
+        <item>
             <title>Parla 2.30</title>
             <pubDate>Fri, 01 May 2026 10:24:57 +0000</pubDate>
             <sparkle:version>42</sparkle:version>
