@@ -5,6 +5,22 @@
         <description>Sparkle update feed for Dictation — local-first macOS dictation + meeting recorder.</description>
         <language>en</language>
         <item>
+            <title>Parla 2.22</title>
+            <pubDate>Fri, 01 May 2026 09:11:03 +0000</pubDate>
+            <sparkle:version>34</sparkle:version>
+            <sparkle:shortVersionString>2.22</sparkle:shortVersionString>
+            <description><![CDATA[
+<p>v2.22 — Phase 1 improvements: (1) New Welcome / How-to page auto-shown on first launch and re-openable from menu bar (Welcome / How-to…) or Preferences → Help. Six sections covering dictation basics, smart cleanup tips, meetings, where transcripts save, privacy, and updates. (2) AppContextClassifier — context detection now uses the FRONTMOST APP'S bundle identifier as the primary signal (Mail → email, Slack → casual, VS Code → code, Notes → note, etc.) with a browser URL probe for web apps (mail.google.com → email, github.com → code, notion.so → note). Falls back to the existing transcript regex only when the app is unrecognized. Matches the pattern documented by Wispr Flow / Aqua / Superwhisper. (3) Meeting Browser: new toolbar with Show in Finder, Copy Summary, and Copy Transcript buttons (with transient 'Copied!' feedback). (4) Preferences sidebar grew a Help section under SYSTEM with quick links to Welcome, GitHub releases, transcripts folder, and Meeting Browser.</p>
+            ]]></description>
+            <enclosure url="https://github.com/linuslinuslinus/dictation-app-releases/releases/download/v2.22/Parla-2.22.dmg"
+                       sparkle:os="macos"
+                       sparkle:minimumSystemVersion="14.0"
+                       length="13612791"
+                       type="application/octet-stream"
+                       sparkle:edSignature="uSTWlFlKVxFlLl/HXDud99ekTl5mrRFXNx07IvBAO+VzfmrGMtqqEzWgAGA+1kBC1E5yTcNVI5el3TL4S8/JDw==" />
+            <sparkle:minimumSystemVersion>14.0</sparkle:minimumSystemVersion>
+        </item>
+        <item>
             <title>Parla 2.21</title>
             <pubDate>Fri, 01 May 2026 08:35:39 +0000</pubDate>
             <sparkle:version>33</sparkle:version>
