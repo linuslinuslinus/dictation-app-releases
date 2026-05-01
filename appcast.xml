@@ -5,6 +5,22 @@
         <description>Sparkle update feed for Parla — local-first macOS dictation + meeting recorder.</description>
         <language>en</language>
         <item>
+            <title>Parla 2.32</title>
+            <pubDate>Fri, 01 May 2026 11:05:00 +0000</pubDate>
+            <sparkle:version>44</sparkle:version>
+            <sparkle:shortVersionString>2.32</sparkle:shortVersionString>
+            <description><![CDATA[
+<p>v2.32 — adds Gemma 3n E4B as a selectable cleanup model for users who want quality over speed. Quick context: the existing Gemma 4 E2B is ~2 B effective parameters and shows occasional prompt-following weaknesses (paraphrasing, hallucinated headers, over-formatting). Gemma 3n E4B is ~4 B effective parameters in the same Gemma 3n architecture family — about 2× the model capacity, much better at following the long cleanup prompt. Tradeoffs: cleanup latency goes from ~1-2 s to ~2-4 s on most Macs (M-Pro/Max less affected), RAM during cleanup goes from ~2-3 GB to ~4-6 GB (transient — IdleReclaimer still frees the model after 5 min idle), one-time download is ~2.5 GB. Note: 'Gemma 3 4B' itself is a vision-language model in MLX-LM (lives in VLMRegistry, not LLMRegistry) — using the actual VLM Gemma 3 4B would require a different loader and would burn memory on a vision encoder we don't need for text-only cleanup. Gemma 3n E4B is the text-only equivalent and the right pick for our cleanup pipeline. To try it: Preferences → Cleanup → Cleanup Model dropdown → 'Gemma 3n E4B (best quality, ~2× slower)'. The model auto-downloads on first use. If quality is much better, we'll make it the default in v2.33; if not, our next move is fine-tuning the smaller E2B with LoRA on Modal.</p>
+            ]]></description>
+            <enclosure url="https://github.com/linuslinuslinus/dictation-app-releases/releases/download/v2.32/Parla-2.32.dmg"
+                       sparkle:os="macos"
+                       sparkle:minimumSystemVersion="14.0"
+                       length="13643073"
+                       type="application/octet-stream"
+                       sparkle:edSignature="Qh5GnmsqLksEChe6DBY8Wb9jWLgbFcYm1i9RcsauGqmhoFZOm823v9wAQNtNuaevK/EzQpR8uzgwCAzTOnE/Bw==" />
+            <sparkle:minimumSystemVersion>14.0</sparkle:minimumSystemVersion>
+        </item>
+        <item>
             <title>Parla 2.31</title>
             <pubDate>Fri, 01 May 2026 10:32:25 +0000</pubDate>
             <sparkle:version>43</sparkle:version>
