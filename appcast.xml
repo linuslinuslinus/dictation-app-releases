@@ -5,6 +5,22 @@
         <description>Sparkle update feed for Parla — local-first macOS dictation + meeting recorder.</description>
         <language>en</language>
         <item>
+            <title>Parla 2.24</title>
+            <pubDate>Fri, 01 May 2026 09:36:41 +0000</pubDate>
+            <sparkle:version>36</sparkle:version>
+            <sparkle:shortVersionString>2.24</sparkle:shortVersionString>
+            <description><![CDATA[
+<p>v2.24 — Phase 2: browser-hosted meeting detection. The existing native meeting-app detector (Zoom.app, Teams.app, Webex.app, Discord, Slack) now has a companion that polls running browsers' active tab URLs every 3 seconds and fires the SAME 'Record this meeting?' prompt when it finds a meeting URL. Detected URL patterns: meet.google.com/<3-4-3 letter code>, zoom.us/(j|wc|w)/<id>, teams.microsoft.com/l/meetup-join, teams.live.com/meet, *.webex.com/(meet|join), whereby.com/<room>, around.co/r/, discord.com/channels/.... Browsers covered: Chrome (+canary +beta), Safari (+TP), Arc, Brave, Edge, Vivaldi, Opera. Firefox excluded — doesn't expose URL via AppleScript. Each meeting URL only fires once; repeated polls don't re-prompt. Gated on the same calendarIntegrationEnabled flag as the native detector.</p>
+            ]]></description>
+            <enclosure url="https://github.com/linuslinuslinus/dictation-app-releases/releases/download/v2.24/Parla-2.24.dmg"
+                       sparkle:os="macos"
+                       sparkle:minimumSystemVersion="14.0"
+                       length="13620215"
+                       type="application/octet-stream"
+                       sparkle:edSignature="Tpd9+ZHOQd3wVEXS2xhGR6qGi++C2XtDAHFxIV+oEBdHrxT2Pf+Zh9n93dDIpyWjFDWIrPEbkllI3FnXHGJkCA==" />
+            <sparkle:minimumSystemVersion>14.0</sparkle:minimumSystemVersion>
+        </item>
+        <item>
             <title>Parla 2.23</title>
             <pubDate>Fri, 01 May 2026 09:29:04 +0000</pubDate>
             <sparkle:version>35</sparkle:version>
