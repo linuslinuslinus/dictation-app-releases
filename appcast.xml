@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<rss version="2.0" xmlns:sparkle="http://www.andymatuschak.org/xml-namespaces/sparkle" xmlns:dc="http://purl.org/dc/elements/1.1/">
+    <channel>
+        <title>Dictation Releases</title>
+        <description>Sparkle update feed for Dictation — local-first macOS dictation + meeting recorder.</description>
+        <language>en</language>
+        <item>
+            <title>Dictation 2.11</title>
+            <pubDate>Fri, 01 May 2026 03:26:17 +0000</pubDate>
+            <sparkle:version>22</sparkle:version>
+            <sparkle:shortVersionString>2.11</sparkle:shortVersionString>
+            <description><![CDATA[
+<p>Initial Sparkle release. Includes everything through v2.11: context-aware cleanup, Meeting Browser (⌘B), calendar integration with meeting-app detection, live captions floating window with translation toggle, and all bug fixes from v2.5–v2.10.</p>
+            ]]></description>
+            <enclosure url="https://github.com/linuslinuslinus/dictation-app-releases/releases/download/v2.11/Dictation-2.11.dmg"
+                       sparkle:os="macos"
+                       sparkle:minimumSystemVersion="14.0"
+                       length="13131108"
+                       type="application/octet-stream"
+                       sparkle:edSignature="+UhPHpSTtUJPVqPNSCfApZMivshV/Rb0CmWxQZqMQfsEBGqLVlRMvzNq2wEdmvyu6N8ZqN46NU7GKtF3lBQMAQ==" length="13131108" />
+            <sparkle:minimumSystemVersion>14.0</sparkle:minimumSystemVersion>
+        </item>
+    </channel>
+</rss>
