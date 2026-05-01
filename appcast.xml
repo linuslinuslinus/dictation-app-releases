@@ -5,6 +5,22 @@
         <description>Sparkle update feed for Dictation — local-first macOS dictation + meeting recorder.</description>
         <language>en</language>
         <item>
+            <title>Parla 2.16</title>
+            <pubDate>Fri, 01 May 2026 05:48:33 +0000</pubDate>
+            <sparkle:version>28</sparkle:version>
+            <sparkle:shortVersionString>2.16</sparkle:shortVersionString>
+            <description><![CDATA[
+<p>v2.16 fixes: (1) Custom toggle shortcut: applyTogglePreset now persists ToggleConfig with the right mode when picker switches to Custom (was leaving stale .preset state); startToggleMode force-re-registers the Carbon hotkey and installs both chord + modifier-only paths if both are configured. (2) Settings window is now resizable. (3) Live Captions window is now resizable (drag bottom-right corner) — your size is saved per display alongside position; min 320×72, max 1200×480. (4) Sparkle: verified Check for Updates is the correct one-click path from now on, no more terminal commands needed.</p>
+            ]]></description>
+            <enclosure url="https://github.com/linuslinuslinus/dictation-app-releases/releases/download/v2.16/Parla-2.16.dmg"
+                       sparkle:os="macos"
+                       sparkle:minimumSystemVersion="14.0"
+                       length="13569257"
+                       type="application/octet-stream"
+                       sparkle:edSignature="3hiK4sQdmGGUvxRYi07uI51LDpE5t0ssR0FFKvULgfvmS+a0kPIPOj1opLxdW5hqWbVA88xbPLPTB3l64JG+Ag==" length="13569257" />
+            <sparkle:minimumSystemVersion>14.0</sparkle:minimumSystemVersion>
+        </item>
+        <item>
             <title>Parla 2.15</title>
             <pubDate>Fri, 01 May 2026 05:29:13 +0000</pubDate>
             <sparkle:version>27</sparkle:version>
