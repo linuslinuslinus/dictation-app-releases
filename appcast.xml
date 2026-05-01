@@ -5,6 +5,22 @@
         <description>Sparkle update feed for Parla — local-first macOS dictation + meeting recorder.</description>
         <language>en</language>
         <item>
+            <title>Parla 2.25</title>
+            <pubDate>Fri, 01 May 2026 09:41:08 +0000</pubDate>
+            <sparkle:version>37</sparkle:version>
+            <sparkle:shortVersionString>2.25</sparkle:shortVersionString>
+            <description><![CDATA[
+<p>v2.25 — Phase 3: auto-stop meeting recording when the meeting ends. Two trigger sources work in parallel: (1) the browser tab leaves the meeting URL (BrowserMeetingWatcher.onMeetingURLEnded) — covers Google Meet / Zoom-in-browser / Teams-in-browser / Webex / Whereby / Around / Discord; (2) a native meeting app (Zoom.app, Teams.app, Webex Meetings.app, Discord.app, Slack.app) terminates — observed via NSWorkspace.didTerminateApplicationNotification. Either signal calls StatusBarController.autoStopMeetingRecording() which wraps finishMeetingRecording with a labeled trigger reason. New user toggle: Preferences → Meetings → Auto-stop → 'Auto-stop recording when meeting ends' (default ON). The menu bar Stop button still works for manual stop at any time. Edge case not covered yet: native meeting apps that stay running after a meeting ends (Zoom in particular often does this) — those still require manual stop. Phase 4 if needed: CoreAudio per-process attribution to detect when other-than-Parla processes stop using mic.</p>
+            ]]></description>
+            <enclosure url="https://github.com/linuslinuslinus/dictation-app-releases/releases/download/v2.25/Parla-2.25.dmg"
+                       sparkle:os="macos"
+                       sparkle:minimumSystemVersion="14.0"
+                       length="13622272"
+                       type="application/octet-stream"
+                       sparkle:edSignature="SXKzkr0t37o0311sXV7ftxb0q+zdBpSscA4dU96Y5hbHUZjLk+/VUb0ivPifApcH8e0x8CWDfsQUJCiONIVPCg==" />
+            <sparkle:minimumSystemVersion>14.0</sparkle:minimumSystemVersion>
+        </item>
+        <item>
             <title>Parla 2.24</title>
             <pubDate>Fri, 01 May 2026 09:36:41 +0000</pubDate>
             <sparkle:version>36</sparkle:version>
