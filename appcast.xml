@@ -5,6 +5,22 @@
         <description>Sparkle update feed for Parla — local-first macOS dictation + meeting recorder.</description>
         <language>en</language>
         <item>
+            <title>Parla 2.28</title>
+            <pubDate>Fri, 01 May 2026 10:05:49 +0000</pubDate>
+            <sparkle:version>40</sparkle:version>
+            <sparkle:shortVersionString>2.28</sparkle:shortVersionString>
+            <description><![CDATA[
+<p>v2.28 — fully-scrubbed binary. The cert real-name leak (1 occurrence of the developer's full name visible via 'strings Parla.app/Contents/MacOS/Parla') is now gone. Three changes: (1) ROTATED THE CODE-SIGNING CERT — the self-signed DictationLocalDev cert was regenerated with subject 'CN=DictationLocalDev / O=Parla Local Dev / OU=Parla / C=US' (no personal info). The previous cert with the developer's name has been deleted from the keychain. (2) PATCHED setup-dev-cert.sh to add 'security add-trusted-cert -p codeSign' as part of cert provisioning so future regenerations don't fall back to ad-hoc signing on the next build. (3) SCRUBBED the example text in Preferences → Cleanup → Custom Vocabulary. The placeholder previously read 'Example: Linus Bleinroth / Anthropic / Pyannote' — now generic ('Kubernetes / Postgres / Pyannote'). Final binary now contains zero occurrences of either the developer's home-folder path OR full name. ⚠️  IMPORTANT for users updating from v2.27 or earlier: the new code signature is different, so macOS TCC will treat Parla as a 'new app' on first launch after the update. You'll be re-prompted to grant Microphone, Accessibility, and Input Monitoring permissions ONCE — this only happens this one time. Going forward, signature is stable and grants persist across rebuilds.</p>
+            ]]></description>
+            <enclosure url="https://github.com/linuslinuslinus/dictation-app-releases/releases/download/v2.28/Parla-2.28.dmg"
+                       sparkle:os="macos"
+                       sparkle:minimumSystemVersion="14.0"
+                       length="13634581"
+                       type="application/octet-stream"
+                       sparkle:edSignature="g5MzcUVMopz/R2+fzK6YroDS7YzXK7gzWprqSI3Po4Ne/qwXxjGpF6Tyq33rI+XpnNAOBoCqP0k19VOoo9gaBA==" />
+            <sparkle:minimumSystemVersion>14.0</sparkle:minimumSystemVersion>
+        </item>
+        <item>
             <title>Parla 2.27</title>
             <pubDate>Fri, 01 May 2026 10:00:37 +0000</pubDate>
             <sparkle:version>39</sparkle:version>
