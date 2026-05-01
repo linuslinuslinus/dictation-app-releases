@@ -5,6 +5,22 @@
         <description>Sparkle update feed for Dictation — local-first macOS dictation + meeting recorder.</description>
         <language>en</language>
         <item>
+            <title>Parla 2.13</title>
+            <pubDate>Fri, 01 May 2026 04:56:44 +0000</pubDate>
+            <sparkle:version>25</sparkle:version>
+            <sparkle:shortVersionString>2.13</sparkle:shortVersionString>
+            <description><![CDATA[
+<p>Design integration: bundled menu-bar icons, breathing HUD glyph (no text, screen-recording-invisible), liquid-glass live captions (460pt, ultra-thin material), onboarding illustrations per step, monoline section icons in Preferences.</p>
+            ]]></description>
+            <enclosure url="https://github.com/linuslinuslinus/dictation-app-releases/releases/download/v2.13/Parla-2.13.dmg"
+                       sparkle:os="macos"
+                       sparkle:minimumSystemVersion="14.0"
+                       length="13528500"
+                       type="application/octet-stream"
+                       sparkle:edSignature="PXhK2HLK66YCHX9UdsDGxfCCzagQhp1AMV/HLpdRkf/w9R4ogSaZ/v+kTlJJMaEO4o5walgF4T9DeJXBoGkvCw==" length="13528500" />
+            <sparkle:minimumSystemVersion>14.0</sparkle:minimumSystemVersion>
+        </item>
+        <item>
             <title>Parla 2.12</title>
             <pubDate>Fri, 01 May 2026 04:40:10 +0000</pubDate>
             <sparkle:version>24</sparkle:version>
