@@ -5,6 +5,22 @@
         <description>Sparkle update feed for Parla — local-first macOS dictation + meeting recorder.</description>
         <language>en</language>
         <item>
+            <title>Parla 2.27</title>
+            <pubDate>Fri, 01 May 2026 10:00:37 +0000</pubDate>
+            <sparkle:version>39</sparkle:version>
+            <sparkle:shortVersionString>2.27</sparkle:shortVersionString>
+            <description><![CDATA[
+<p>v2.27 — three additive improvements. (1) DEFENSIVE EMAIL HEADER SCRUB: post-cleanup regex strips any leading 'To:/Subject:/From:/Cc:/Bcc:/Date:/Reply-To:/Sender:' lines that Gemma might still hallucinate despite v2.26's prompt fix. Belt-and-suspenders. (2) CALENDAR PRE-ARM: scans the user's calendars every 60s for events starting within 2 minutes whose body/location/url contains a meeting URL (Google Meet, Zoom, Teams, Webex, Whereby, Around). Fires the same record-meeting prompt before the user even joins. Gated on calendarIntegrationEnabled and full-access calendar permission. De-duped per event. (3) PHASE 4 — COREAUDIO PER-PROCESS ATTRIBUTION: closes the v2.25 auto-stop edge case where Zoom/Teams stays running after a meeting ends. SystemAudioWatcher uses kAudioHardwarePropertyProcessObjectList + kAudioProcessPropertyIsRunningInput (macOS 14.4+) to enumerate which apps are using the mic, filters out our own PID, and triggers the auto-stop after 30s of zero non-Parla mic activity. Deployment target bumped from 14.0 to 14.4 to enable the per-process API.</p>
+            ]]></description>
+            <enclosure url="https://github.com/linuslinuslinus/dictation-app-releases/releases/download/v2.27/Parla-2.27.dmg"
+                       sparkle:os="macos"
+                       sparkle:minimumSystemVersion="14.0"
+                       length="13634587"
+                       type="application/octet-stream"
+                       sparkle:edSignature="YShJ9CgBXQadyP1FJBg57/1ZVVn33ENWMehBn0t7Iy0+xDzZvIVTrkL+fieBJ6D9KkF9qOk2execUpgLQ54hCg==" />
+            <sparkle:minimumSystemVersion>14.0</sparkle:minimumSystemVersion>
+        </item>
+        <item>
             <title>Parla 2.26</title>
             <pubDate>Fri, 01 May 2026 09:50:37 +0000</pubDate>
             <sparkle:version>38</sparkle:version>
