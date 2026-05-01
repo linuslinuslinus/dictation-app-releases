@@ -5,6 +5,22 @@
         <description>Sparkle update feed for Dictation — local-first macOS dictation + meeting recorder.</description>
         <language>en</language>
         <item>
+            <title>Parla 2.23</title>
+            <pubDate>Fri, 01 May 2026 09:29:04 +0000</pubDate>
+            <sparkle:version>35</sparkle:version>
+            <sparkle:shortVersionString>2.23</sparkle:shortVersionString>
+            <description><![CDATA[
+<p>v2.23 — privacy + bug fixes. (1) Public DMG no longer leaks the developer's home-folder path via MLX C++ debug strings. The 25 `/Users/<username>/...` strings that were visible to anyone running `strings Parla` are now scrubbed via a post-build pass (build.sh → scripts/scrub-binary.py). The cert-embedded developer name will be cleaned in a later opt-in release (regenerating the signing cert requires re-granting macOS TCC permissions, so it's a deliberate user choice). (2) Settings → Help → 'Open Meeting Browser' button now actually opens the browser. Same root cause as the Sparkle bug we fixed in v2.20: `NSApp.delegate as? AppDelegate` returns nil under SwiftUI's @NSApplicationDelegateAdaptor in Settings-only scenes. Routed through a new StatusBarController.shared singleton (matching the SparkleUpdater.shared pattern). The 'Open Welcome' button in the same panel got the same fix.</p>
+            ]]></description>
+            <enclosure url="https://github.com/linuslinuslinus/dictation-app-releases/releases/download/v2.23/Parla-2.23.dmg"
+                       sparkle:os="macos"
+                       sparkle:minimumSystemVersion="14.0"
+                       length="13613356"
+                       type="application/octet-stream"
+                       sparkle:edSignature="CGVH8PcmCfpb6bkVqGO5LQ2nXcBSVXDBLgBwcMc/J4xe5dfoE0h9fJjuepLfCMKlrcXQI4Oe+UJ6IMNAgjtdDA==" />
+            <sparkle:minimumSystemVersion>14.0</sparkle:minimumSystemVersion>
+        </item>
+        <item>
             <title>Parla 2.22</title>
             <pubDate>Fri, 01 May 2026 09:11:03 +0000</pubDate>
             <sparkle:version>34</sparkle:version>
