@@ -5,6 +5,24 @@
         <description>Sparkle update feed for Parla — local-first macOS dictation + meeting recorder.</description>
         <language>en</language>
         <item>
+            <title>Parla 2.35</title>
+            <pubDate>Sun, 03 May 2026 10:01:43 +0000</pubDate>
+            <sparkle:version>47</sparkle:version>
+            <sparkle:shortVersionString>2.35</sparkle:shortVersionString>
+            <description><![CDATA[
+<p>Crash fix: meeting transcription would SIGTRAP with 'Negative Array index is out of range' in MeetingTranscriber.transcribeSegments when the diarizer returned overlapping speaker segments (two speakers talking at the same time, or Pyannote emitting overlapping bounds). The same crash blocked re-transcribing the affected meeting. Audio cache files were not affected — re-transcribing the failed meeting on v2.35 will recover it.
+
+Root cause: the per-group offset arithmetic clamped only the absolute sample index to non-negative, but then subtracted a running 'samples consumed' counter which could drive the relative startSample negative when a group overlapped already-trimmed audio. The 'endSample > startSample' guard didn't catch it because positive > negative is true. Fix tracks consumed samples as a forward-only high-water mark, clamps both startSample and endSample to [0, buffer.count], and tolerates groups that extend into already-consumed regions by transcribing whatever portion remains.</p>
+            ]]></description>
+            <enclosure url="https://github.com/linuslinuslinus/dictation-app-releases/releases/download/v2.35/Parla-2.35.dmg"
+                       sparkle:os="macos"
+                       sparkle:minimumSystemVersion="14.0"
+                       length="13644954"
+                       type="application/octet-stream"
+                       sparkle:edSignature="tuqe+ZxZg3qOhh2D+e9xQ0LVfta4psD6tgGW0dDqRAfhNuiUy4oqF+KuAamdYlvgi0a250teBlfk7bPXobOCAA==" />
+            <sparkle:minimumSystemVersion>14.0</sparkle:minimumSystemVersion>
+        </item>
+        <item>
             <title>Parla 2.34</title>
             <pubDate>Fri, 01 May 2026 11:28:31 +0000</pubDate>
             <sparkle:version>46</sparkle:version>
